@@ -68,4 +68,16 @@ public class Libro {
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
+
+    @Override
+    public String toString() {
+        return "Libro{" +
+                "ISBN=" + ISBN +
+                ", titulo='" + titulo + '\'' +
+                ", autor='" + autor + '\'' +
+                ", cantidad=" + cantidad +
+                ", cantidad_disponible=" + cantidad_disponible +
+                ", imagen='" + imagen + '\'' +
+                '}';
+    }
 }

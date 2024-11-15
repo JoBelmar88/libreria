@@ -9,24 +9,34 @@ package com.mycompany.applibreria;
  * @author Tom
  */
 public class Docente extends Usuario {
-    private String profesion;
+    private boolean doctorado;
+    private boolean magister;
 
-    public Docente(String RUN, String nombre, String genero, String profesion) {
-        super(RUN, nombre, genero);
-        this.profesion = profesion;
+    public boolean isDoctorado() {
+        return doctorado;
     }
 
-    public String getProfesion() {
-        return profesion;
+    public void setDoctorado(boolean doctorado) {
+        this.doctorado = doctorado;
     }
 
-    public void setProfesion(String profesion) {
-        this.profesion = profesion;
+    public boolean isMagister() {
+        return magister;
+    }
+
+    public void setMagister(boolean magister) {
+        this.magister = magister;
+    }
+
+    public Docente(String RUN, String nombre, String genero, String carrera, boolean doctorado, boolean magister) {
+        super(RUN, nombre, genero, carrera);
+        this.doctorado = doctorado;
+        this.magister = magister;
     }
 
     @Override
     public String toString() {
-        return "Docente{" + super.toString() + ", profesion=" + profesion + '}';
+        return "Docente{" + super.toString() + ", doctorado=" + doctorado + ", magister=" + magister + '}';
     }
 }
 

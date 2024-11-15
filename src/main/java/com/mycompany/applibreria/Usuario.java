@@ -12,13 +12,15 @@ public abstract class Usuario {
     private String RUN;
     private String nombre;
     private String genero;
+    private String carrera;
+    private int prestamo;
 
-    public Usuario() {}
-
-    public Usuario(String RUN, String nombre, String genero) {
+    public Usuario(String RUN, String nombre, String genero, String carrera) {
         this.RUN = RUN;
         this.nombre = nombre;
         this.genero = genero;
+        this.carrera = carrera;
+        this.prestamo = 0;
     }
 
     public String getNombre() {
@@ -45,14 +47,30 @@ public abstract class Usuario {
         this.RUN = RUN;
     }
 
+    public int getPrestamo() {
+        return prestamo;
+    }
+
+    public void setPrestamo(int prestamo) {
+        this.prestamo = prestamo;
+    }
+
+    public String getCarrera() {
+        return carrera;
+    }
+
+    public void setCarrera(String carrera) {
+        this.carrera = carrera;
+    }
+
     @Override
     public String toString() {
         return "Usuario{" +
                 "RUN='" + RUN + '\'' +
                 ", nombre='" + nombre + '\'' +
                 ", genero='" + genero + '\'' +
+                ", carrera='" + carrera + '\'' +
+                ", prestamo=" + prestamo +
                 '}';
     }
-
-
 }

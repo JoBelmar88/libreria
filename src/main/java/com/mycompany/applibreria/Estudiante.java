@@ -9,23 +9,15 @@ package com.mycompany.applibreria;
  * @author Tom
  */
 public class Estudiante extends Usuario {
-    private String carrera;
 
     public Estudiante(String RUN, String nombre, String genero, String carrera) {
-        super(RUN, nombre, genero);
-        this.carrera = carrera;
-    }
-
-    public String getCarrera() {
-        return carrera;
-    }
-
-    public void setCarrera(String carrera) {
-        this.carrera = carrera;
+        super(RUN, nombre, genero, carrera);
     }
 
     @Override
     public String toString() {
-        return "Estudiante{" + super.toString() + ", carrera=" + carrera + '}';
+        return "Estudiante{" + super.toString() + '}';
     }
+
+
 }
